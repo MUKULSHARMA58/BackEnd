@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: "t395907@gmail.com",
+      user: "",
       pass: "",
     },
   }); 
@@ -58,7 +58,7 @@ const transporter = nodemailer.createTransport({
                                                 if(d4.deletedCount == 1 )
                                                 {
                                                     transporter.sendMail({
-                                                        from: '"Shop Now 👻" <t395907@gmail.com>', // sender address
+                                                        from: '"Shop Now 👻" <>', // sender address
                                                         to: email, // list of receivers
                                                         subject: "Password Reset OTP ✔", // Subject line
                                                         text: `Hi , ${d1[0].name}  , Your password has been Reset Successfully Just Now :)`, // plain text body
@@ -126,7 +126,7 @@ const transporter = nodemailer.createTransport({
             OtpSchema.insertMany({u_id : d1[0]._id , email :d1[0].email,  otp : otp , time : Number(new Date(Date.now())) }).then((o_data)=>{
                 if(o_data.length > 0){
                     transporter.sendMail({
-                        from: '"Shop Now 👻" <t395907@gmail.com>', // sender address
+                        from: '"Shop Now 👻" <>', // sender address
                         to: u_mail, // list of receivers
                         subject: "Password Reset OTP ✔", // Subject line
                         text: `Hi , ${u_mail}  , Use this OTP : ${otp}  , to reset your Password`, // plain text body
