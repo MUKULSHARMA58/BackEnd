@@ -399,7 +399,7 @@ exports.addOrder = (req , res) =>{
                 if(re_2.deletedCount > 0){
                     // res.status(200).send({status : 200 , message : "Order Placed Successfully"})
                     transporter.sendMail({
-                        from: '"Shop Now 👻" <t395907@gmail.com>', // sender address
+                        from: '"Shop Now 👻" <>', // sender address
                         to: req.body.email, // list of receivers
                         subject:  "Order Placed Successfully" , // Subject line
                         text: `Hi  Your Order been Placed Successfully Just Now :)`, // plain text body
